@@ -468,14 +468,14 @@ def make_prediction():
 
 if predict_bt:
 
-    with st_lottie_spinner(lottie_loading_an, quality='high', height='200px', width='200px'):
+   with st_lottie_spinner(lottie_loading_an, quality='high', height='200px', width='200px'):
         final_pred = make_prediction()
     # if final_pred exists, then stop displaying the loading animation
-    if final_pred[0] == 0:
-        st.success('## You have been approved for a credit card')
-        st.balloons()
+   if final_pred[0] == 0:
+       st.success('## You have been approved for a credit card')
+       st.balloons()
     elif final_pred[0] == 1:
-        st.error('## Unfortunately, you have not been approved for a credit card')
+       st.error('## Unfortunately, you have not been approved for a credit card')
 
 
 
