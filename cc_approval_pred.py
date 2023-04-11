@@ -451,9 +451,10 @@ lottie_loading_an = load_lottieurl('https://assets3.lottiefiles.com/packages/lf2
 
 def make_prediction():
     # connect to s3 bucket
-    client = boto3.client('s3', aws_access_key_id=st.secrets["access_key"],aws_secret_access_key=st.secrets["secret_access_key"]) # for s3 API keys when deployed on streamlit share
+    #client = boto3.client('s3', aws_access_key_id=st.secrets["access_key"],aws_secret_access_key=st.secrets["secret_access_key"]) # for s3 API keys when deployed on streamlit share
     #client = boto3.client('s3', aws_access_key_id='access_key',aws_secret_access_key='secret_access_key') # for s3 API keys when deployed on locally
-
+    client = boto3.client('s3',aws_access_key_id=ACCESS_KEY,aws_secret_access_key=SECRET_KEY,aws_session_token=SESSION_TOKEN)
+    
     bucket_name = "creditapplipred"
     key = "gradient_boosting_model.sav"
 
