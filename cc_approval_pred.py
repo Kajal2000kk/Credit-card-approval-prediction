@@ -7,7 +7,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, OrdinalEncoder
 from sklearn.ensemble import GradientBoostingClassifier
 from imblearn.over_sampling import SMOTE
-#from secret import access_key, secret_access_key
+from secret import access_key, secret_access_key
 import joblib
 import streamlit as st
 import boto3
